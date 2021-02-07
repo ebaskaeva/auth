@@ -22,3 +22,6 @@ security:
       logout:
         path: app_logout
         target: /
+
+  access_control:
+    - { path: '^/api', roles: [IS_AUTHENTICATED_FULLY] } # ROLE_ADMIN

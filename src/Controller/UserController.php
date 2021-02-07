@@ -15,6 +15,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class UserController extends AbstractController
     /**
 	 * @Route("/api")
+	 * 
 	 */
 {
     public function __construct(UserRepository $userRepository, UserPasswordEncoderInterface $passwordEncoder)
@@ -22,14 +23,6 @@ class UserController extends AbstractController
         $this->userRepository = $userRepository;
         $this->passwordEncoder = $passwordEncoder;
     }
-	/*
-    #[Route('/user', name: 'user')]
-    public function index(): Response
-    {
-        return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController',
-        ]);
-    }*/
     
     /**
 	 * @Route("/users", name="users", methods={"GET"})
